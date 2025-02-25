@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Karla Portfolio</title>
+</head>
+
+<body>
+    <!-- Menu de navegação -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Karla <span>Xavier</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#home">Início</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">Experiência</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#projects">Projetos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#knowledge">Conhecimentos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#certificates">Certificados</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#contact">Fale comigo</a></div>
+            </div>
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Início</a>
+                <a href="#about">Experiência</a>
+                <a href="#projects">Projetos</a>
+                <a href="#knowledge">Conhecimentos</a>
+                <a href="#certificates">Certificados</a>
+                <a href="#contact">Fale comigo</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção principal -->
+    <section id="home">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="img/main.png" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Olá, Eu sou a <span>Karla Xavier</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">Eu sou <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                    <strong>Arquiteta Java</strong>: Especialista em design e implementação de soluções empresariais, com foco em arquiteturas distribuídas, microsserviços e APIs RESTful. Comprometida com a excelência técnica e boas práticas de desenvolvimento.
+                </p>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1300">
+                    <strong>Gestora de Projetos</strong>: Experiência em liderança de equipes técnicas, metodologias ágeis e gestão de projetos de software, garantindo entregas de alta qualidade dentro dos prazos estabelecidos.
+                </p>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1500">
+                    <strong>Especialista em Sistemas</strong>: Profunda experiência em ambientes Linux e Windows, otimizando processos e implementando soluções tecnológicas eficientes para diferentes cenários empresariais.
+                </p>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
+                    <!-- Botão para o WhatsApp -->
+                    <a href="https://wa.me/556186217034" target="_blank" style="text-decoration: none;">
+                        <button>WHATSAPP</button>
+                    </a>
+                    <!-- Botão para o Currículo -->
+                    <a href="docs/CV  Karla Xavier Desenvolvedora Web.pdf" target="_blank" style="text-decoration: none;">
+                        <button>CURRÍCULO</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contact">
+        <div class="main-container">
+            <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">Fale Comigo</h1>
+            <p class="section-description" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                Vamos conversar sobre como posso contribuir com seu projeto?
+            </p>
+            <div class="social-links" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                <a href="https://github.com/karlinhaxavier" target="_blank" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/karladesousaxavier" target="_blank" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/karla-xavier-952683291/" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kakakarla897@gmail.com" target="_blank" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/556186217034" target="_blank" title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="btn-container" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                <a href="docs/CV  Karla Xavier Desenvolvedora Web.pdf" target="_blank" class="cv-button">
+                    <i class="fa-solid fa-file-pdf"></i> Baixar CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="about">
+        <div class="main-container">
+            <div class="image">
+                <img src="img/sobre.jpg" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left"><span>Experiência</span></h1><br><br>
+                <p class="experience-text" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
+                    <span class="experience-container">
+                        <img class="experience-logo" src="https://media.licdn.com/dms/image/v2/D4D0BAQHPrKsfDFR07Q/company-logo_100_100/company-logo_100_100/0/1719256808556/llam_tecnologia_do_brasil_logo?e=1740009600&v=beta&t=XbX0El4Z7dfpb-rgTXTiIUtA0IystRW_S1NHhffWSnM" />
+                        <span class="experience-text-content">
+                            Gestora de Projetos e Analista de Sistemas<br>
+                            Instituto LLAM Tecnologia do Brasil<br>
+                            Tempo Integral<br>
+                            FEV/2023 - Até o momento<br>
+                            Distrito Federal, Brasil (Remoto)
+                        </span>
+                    </span>
+                </p>
+                <p>
+                    Atuo como responsável pela organização das demandas e tarefas dos desenvolvedores residentes, que estão envolvidos em mais de 15 projetos em andamento. Minha função inclui a gestão de aproximadamente 100 demandas simultâneas, a aprovação de merge requests e o suporte à integração de novos desenvolvedores, facilitando sua adaptação ao ambiente de trabalho.
+                </p>
+                <p>
+                    Além disso, sou responsável pela análise, projeto, desenvolvimento e implementação de sistemas e aplicações, assegurando que as soluções tecnológicas atendam às necessidades da empresa e contribuam para a eficiência dos processos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects">
+        <h1 id="h1-baixo">Projetos</h1>
+        <div class="main-container">
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <div class="project-card">
+                    <img src="img/projeto1.png" alt="Projeto 1">
+                    <h2>API RESTful</h2>
+                    <p>Uma das APIs RESTful desenvolvidas na LLAM Tecnologia do Brasil, utilizando Bean Validation e HATEOAS.</p>
+                    <a href="https://github.com/karlinhaxavier/class-backend" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/projeto1.png" alt="Projeto 1">
+                    <h2>API REST</h2>
+                    <p>Projeto pessoal de API REST para gerenciamento de usuários e departamentos, com funcionalidades para buscar por ID, listar usuários e inserir novos usuários.</p>
+                    <a href="https://github.com/karlinhaxavier/class-backend" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="knowledge">
+        <h1>Conhecimentos</h1>
+        <div class="knowledge-container">
+            <div class="knowledge-item">
+                <h2>IDE:</h2>
+                <p>Utilização de diversas IDEs para desenvolvimento, incluindo Eclipse, IntelliJ IDEA e Visual Studio Code, otimizando a produtividade e garantindo qualidade no código.</p>
+            </div>
+            <div class="knowledge-item">
+                <h2>Atividades realizadas na LLAM Tecnologia do Brasil:</h2>
+                <p>
+                    Gerenciamento de projetos no RedMine, revisão de merges, APIs REST com HATEOAS, banco CERIF 1.6, testes com JUnit 5, Spring Boot, SOLID, Docker, Git, UML, SQL, JavaScript, redes e firewall Linux/Windows.</p>
+            </div>
+            <div class="knowledge-item">
+                <h2>Tecnologias:</h2>
+                <p>RedMine, Git, Java, JavaScript, HTML, CSS, Spring Boot, Spring MVC, Lombok, Mockito, JUnit 5, MySQL, SQL, JPA, CERIF 1.6 EuroCRIS, RESTful API, HATEOAS, Swagger, Eclipse, DBeaver, Docker, POO, SOLID, Clean Code, Design Patterns, Linux, Firewall Linux, Windows.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Certificados -->
+    <section id="certificates">
+        <h1 id="h1-baixo">Certificados</h1>
+        <div class="main-container">
+            <div class="projects-grid">
+                <!-- Certificado 1 -->
+                <div class="project-card">
+                    <img src="img/certifprof.png" alt="Certificado 1">
+                    <h2>Scrum Foundation Professional Certification - SFPC™</h2>
+                    <p>Concluído em 17 de abril de 2024.</p>
+                    <a href="https://drive.google.com/file/d/1F7reo8NzisEk0P5807UMQc3PVkjAIBWb/view" target="_blank" class="github-link">
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+                <!-- Certificado 2 -->
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Java 2022 COMPLETO: Do Zero ao Profissional + Projetos</h2>
+                    <p>Concluído em 17 de junho de 2024.</p>
+                    <a href="https://www.udemy.com/certificate/UC-7a02fd9e-57c4-425e-a31d-dafc842ad38b/" target="_blank" class="github-link">
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Sistema Financeiro - Java Web</h2><br>
+
+                    <p>Concluído em 17 de setembro de 2024.</p>
+                    <a href="https://www.udemy.com/certificate/UC-48c7928f-1e51-4176-9817-fe2f2bf95f80/" target="_blank" class="github-link">
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Configurando o ambiente de desenvolvimento de Java</h2>
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Java SE Polimorfismo</h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Testes Unitários em Java utilizando JUnit</h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Web Design Completo: HTML, CSS, JS, Vue e GIT </h2><br>
+
+                    <p>Concluído em 30 de dezembro de 2024.</p>
+                    <a href="https://www.udemy.com/certificate/UC-d13b274c-11d0-446e-a610-e484153e0edc/" target="_blank" class="github-link">
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Curso do FIGMA ao código - Daniel Tapias</h2><br>
+
+                    <p>Concluído em 21 de abril de 2024.</p>
+                    <a href="https://www.udemy.com/certificate/UC-bd295ce6-ba51-4c19-bb7a-d804d466cdf5/" target="_blank" class="github-link">
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>UX para quem (ainda) não é de UX</h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Docker Essentials </h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Aprenda Docker em 7 dias</h2><br>
+
+                    <p>Concluído em 2 de novembro de 2023.</p>
+                    <a href="https://www.udemy.com/certificate/UC-3387c3c9-2654-43ec-804b-c2fad0caf5f1/" target="_blank" class="github-link">
+
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Gestão Ágil com Scrum Completo</h2><br>
+
+                    <p>Concluído em 16 de novembro de 2023.</p>
+                    <a href="https://www.udemy.com/certificate/UC-54bdad57-8620-4d40-a06a-cd0d37d26de6/" target="_blank" class="github-link">
+
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Introdução a Agilidade + Scrum + Kanban</h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Git e Github: O Essencial para Iniciantes</h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Introdução ao Sistema Operacional Linux</h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>SysAdmin Linux - 100% Terminal - FREE </h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Terminal Linux</h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Curso Essencial de Linux e Shell Linux </h2><br>
+
+                    <p>Concluído em 27 de outubro de 2023.</p>
+                    <a href="https://www.udemy.com/certificate/UC-84d79a69-d669-43c6-987d-1506576cfbe4/" target="_blank" class="github-link">
+
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Banco de Dados SQL do Zero ao Avançado </h2><br>
+
+                    <p>Concluído em 2 de novembro de 2023.</p>
+                    <a href="https://www.udemy.com/certificate/UC-58a7816a-b7e9-4b8f-a947-3ddc433434b5/" target="_blank" class="github-link">
+
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Aprendendo Redes de Computadores de forma prática</h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/udemy.jpg" alt="Certificado 2">
+                    <h2>Monitoramento de Rede MBA PRTG Networking Monitor </h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/alura.png" alt="Certificado 2">
+                    <h2>Imersão Python: Do Excel à Análise de Dados</h2><br>
+
+                    <p>Concluído em 8 de abril de 2024.</p>
+                    <a href="https://drive.google.com/file/d/1O9TjoWFaH14sF6mgTiw2Dy5z5al1eQlg/view" target="_blank" class="github-link">
+
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/alura.png" alt="Certificado 2">
+                    <h2>Imersão Front-End</h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/alura.png" alt="Certificado 2">
+                    <h2>Imersão Inteligência Artificial 2a edição</h2><br>
+
+                    <p></p>
+                    <i class="ab">Sem certificação</i>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/cubos.png" alt="Certificado 2">
+                    <h2> Minicurso de Programação na prática</h2><br>
+
+                    <p>Concluído em 8 de novembro de 2024.</p>
+                    <a href="https://aulas.cubos.academy/certificado/38fe61be-b966-4e1a-8427-d10a52b09269/cursos/833b4b9d-35a1-4d16-b19f-1a221fa7fbfb" target="_blank" class="github-link">
+
+                        <i class="">Link da Certificação</i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="formacao-academica">
+        <h1>Formação Acadêmica</h1>
+        <div class="formacao">
+            <div class="logo" id="anhanguera-logo">
+                <img src="img/guera.png" alt="Logo Anhanguera">
+                <div class="detalhes">
+                    <h2>Universidade Anhanguera</h2>
+                    <p>Graduando em Análise e Desenvolvimento de Sistemas</p>
+                    <p>3º Semestre</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
