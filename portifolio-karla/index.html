@@ -23,11 +23,12 @@
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#projects">Projetos</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#knowledge">Conhecimentos</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#certificates">Certificados</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#contact">Fale comigo</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#formacao-academica">Formação</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700"><a href="#contact">Fale comigo</a></div>
             </div>
             <div class="nav-controls">
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">
-                    <i class="fa-solid fa-moon"></i>
+                    <i class="fas fa-moon"></i>
                 </button>
                 <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
             </div>
@@ -39,6 +40,7 @@
                 <a href="#projects">Projetos</a>
                 <a href="#knowledge">Conhecimentos</a>
                 <a href="#certificates">Certificados</a>
+                <a href="#formacao-academica">Formação</a>
                 <a href="#contact">Fale comigo</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
@@ -111,40 +113,61 @@
 
     <!-- Seção Sobre Mim -->
     <section id="about">
-        <div class="main-container">
-            <div class="image">
-                <img src="img/sobre.jpg" alt="">
+        <div class="experience-container">
+            <div class="experience-images" data-aos="fade-right" data-aos-duration="1500">
+                <div class="experience-image main-image">
+                    <img src="img/sobre.jpg" alt="Experiência na Llam">
+                    <div class="glow"></div>
+                </div>
+                <a href="https://www.linkedin.com/company/llam-tecnologia-do-brasil/posts/?feedView=all" class="experience-image llam-image" target="_blank">
+                    <img src="img/llam_tecnologia_do_brasil_logo.jpg" alt="Logo Llam">
+                    <div class="glow"></div>
+                </a>
             </div>
-            <div class="content">
-                <h1 data-aos="fade-left"><span>Experiência</span></h1><br><br>
-                <p class="experience-text" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
-                    <span class="experience-container">
-                        <img class="experience-logo" src="https://media.licdn.com/dms/image/v2/D4D0BAQHPrKsfDFR07Q/company-logo_100_100/company-logo_100_100/0/1719256808556/llam_tecnologia_do_brasil_logo?e=1740009600&v=beta&t=XbX0El4Z7dfpb-rgTXTiIUtA0IystRW_S1NHhffWSnM" />
-                        <span class="experience-text-content">
-                            Gestora de Projetos e Analista de Sistemas<br>
-                            Instituto LLAM Tecnologia do Brasil<br>
-                            Tempo Integral<br>
-                            FEV/2023 - Até o momento<br>
-                            Distrito Federal, Brasil (Remoto)
-                        </span>
-                    </span>
-                </p>
-                <p>
-                    Atuo como responsável pela organização das demandas e tarefas dos desenvolvedores residentes, que estão envolvidos em mais de 15 projetos em andamento. Minha função inclui a gestão de aproximadamente 100 demandas simultâneas, a aprovação de merge requests e o suporte à integração de novos desenvolvedores, facilitando sua adaptação ao ambiente de trabalho.
-                </p>
-                <p>
-                    Além disso, sou responsável pela análise, projeto, desenvolvimento e implementação de sistemas e aplicações, assegurando que as soluções tecnológicas atendam às necessidades da empresa e contribuam para a eficiência dos processos.
-                </p>
+            <div class="experience-content" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
+                <h2>Experiência na Llam</h2>
+                <div class="experience-period">FEV/2023 - Até o momento • Distrito Federal, Brasil (Remoto)</div>
+                <p><strong>Arquiteta Java</strong>: Especialista em design e implementação de soluções empresariais, com foco em arquiteturas distribuídas, microsserviços e APIs RESTful. Comprometida com a excelência técnica e boas práticas de desenvolvimento.</p>
+                <p><strong>Gestora de Projetos</strong>: Experiência em liderança de equipes técnicas, metodologias ágeis e gestão de projetos de software, garantindo entregas de alta qualidade dentro dos prazos estabelecidos.</p>
+                <p><strong>Especialista em Sistemas</strong>: Profunda compreensão de sistemas distribuídos, integração contínua e entrega contínua (CI/CD), garantindo a qualidade e eficiência do desenvolvimento de software.</p>
             </div>
         </div>
     </section>
 
     <!-- Seção Projetos -->
     <section id="projects">
-        <h1 id="h1-baixo">Projetos</h1>
+        <h1 data-aos="fade-up">Projetos</h1>
         <div class="main-container">
-            <div class="projects-grid">
+            <div class="projects-grid" id="projects-grid">
                 <!-- Projeto 1 -->
+                <div class="project-card" data-aos="fade-up">
+                    <img src="img/projeto1.png" alt="Java Web Spring API">
+                    <h2>Java Web Spring API</h2>
+                    <p>API RESTful para gestão de usuários e dietas, desenvolvida com Spring Boot e boas práticas de desenvolvimento.</p>
+                    <a href="https://github.com/karlinhaxavier/java_web_spring" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="img/projeto1.png" alt="Listagem Pokemon">
+                    <h2>Projeto Listagem Pokemon</h2>
+                    <p>Interface interativa que consome a API do Pokemon para exibir informações detalhadas sobre diferentes Pokemon.</p>
+                    <a href="https://github.com/karlinhaxavier/projeto-listagem-pokemon" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="img/projeto1.png" alt="NutriWeb">
+                    <h2>NutriWeb</h2>
+                    <p>Sistema web completo para gestão nutricional, incluindo API própria para gerenciamento de usuários e planos alimentares.</p>
+                    <a href="https://github.com/karlinhaxavier/nutriweb" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
                 <div class="project-card">
                     <img src="img/projeto1.png" alt="Projeto 1">
                     <h2>API RESTful</h2>
@@ -153,7 +176,54 @@
                         <i class="fa-brands fa-github"></i> Ver no GitHub
                     </a>
                 </div>
-
+                <div class="project-card">
+                    <img src="img/projeto1.png" alt="Projeto 1">
+                    <h2>API RESTful</h2>
+                    <p>um CRUD para armazenar endereços</p>
+                    <a href="https://github.com/karlinhaxavier/Addressbackend" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <img src="img/projeto1.png" alt="Projeto 1">
+                    <h2>API RESTful</h2>
+                    <p>Dublin Core Backend serve como uma infraestrutura para catalogação e gestão estruturada de metadados em sistemas de backend, facilitando a organização, descoberta e intercâmbio de recursos digitais.</p>
+                    <a href="https://github.com/karlinhaxavier/DublinCore-beckend" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <img src="img/projeto1.png" alt="Projeto 1">
+                    <h2>API RESTful</h2>
+                    <p>Estrutura no backend responsável por gerenciar comentários em uma aplicação.</p>
+                    <a href="https://github.com/karlinhaxavier/Comment-beckend" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <img src="img/projeto1.png" alt="Projeto 1">
+                    <h2>API RESTful</h2>
+                    <p>media-vitae-backend é o ramo da programação que cuida da parte interna de uma aplicação.</p>
+                    <a href="https://github.com/karlinhaxavier/mediavitae-backend" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <img src="img/projeto1.png" alt="Projeto 1">
+                    <h2>API RESTful</h2>
+                    <p>Gerenciamento de perguntas e respostas com Associação de perguntas a categorias ou tópicos Validação de respostas em quizzes ou testes Armazenamento e recuperação de perguntas no banco de dados Integração com APIs ou sistemas de aprendizagem para sugestões inteligentes</p>
+                    <a href="https://github.com/karlinhaxavier/question-backend" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <img src="img/projeto1.png" alt="Projeto 1">
+                    <h2>API RESTful</h2>
+                    <p>trole de Acesso Baseado em Unidade Implementar funções diferentes dependendo da unidade organizacional Controlar quais usuários podem acessar quais dados, de acordo com a unid</p>
+                    <a href="https://github.com/karlinhaxavier/Organizationunit-backend" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
                 <div class="project-card">
                     <img src="img/projeto1.png" alt="Projeto 1">
                     <h2>API REST</h2>
@@ -163,283 +233,509 @@
                     </a>
                 </div>
             </div>
+            <button class="load-more-btn" id="load-more-projects">Ver Mais Projetos</button>
         </div>
     </section>
 
     <section id="knowledge">
-        <h1>Conhecimentos</h1>
+        <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">Conhecimentos</h1>
         <div class="knowledge-container">
-            <div class="knowledge-item">
-                <h2>IDE:</h2>
-                <p>Utilização de diversas IDEs para desenvolvimento, incluindo Eclipse, IntelliJ IDEA e Visual Studio Code, otimizando a produtividade e garantindo qualidade no código.</p>
+            <div class="knowledge-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                <h2>Desenvolvimento</h2>
+                <div class="knowledge-content">
+                    <div class="knowledge-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="knowledge-item">
-                <h2>Atividades realizadas na LLAM Tecnologia do Brasil:</h2>
-                <p>
-                    Gerenciamento de projetos no RedMine, revisão de merges, APIs REST com HATEOAS, banco CERIF 1.6, testes com JUnit 5, Spring Boot, SOLID, Docker, Git, UML, SQL, JavaScript, redes e firewall Linux/Windows.</p>
+
+            <div class="knowledge-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                <h2>Ferramentas & DevOps</h2>
+                <div class="knowledge-content">
+                    <div class="knowledge-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code"></i>
+                            <span>Eclipse</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>IntelliJ</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>RedMine</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="knowledge-item">
-                <h2>Tecnologias:</h2>
-                <p>RedMine, Git, Java, JavaScript, HTML, CSS, Spring Boot, Spring MVC, Lombok, Mockito, JUnit 5, MySQL, SQL, JPA, CERIF 1.6 EuroCRIS, RESTful API, HATEOAS, Swagger, Eclipse, DBeaver, Docker, POO, SOLID, Clean Code, Design Patterns, Linux, Firewall Linux, Windows.</p>
+
+            <div class="knowledge-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                <h2>Competências</h2>
+                <div class="knowledge-content">
+                    <div class="knowledge-grid">
+                        <div class="tech-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>SOLID</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Clean Code</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Design Patterns</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-server"></i>
+                            <span>REST APIs</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-vial"></i>
+                            <span>JUnit</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>HATEOAS</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Seção Certificados -->
     <section id="certificates">
-        <h1 id="h1-baixo">Certificados</h1>
+        <h1 data-aos="fade-up">Certificados</h1>
         <div class="main-container">
-            <div class="projects-grid">
+            <div class="projects-grid" id="certificates-grid">
                 <!-- Certificado 1 -->
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-up">
                     <img src="img/certifprof.png" alt="Certificado 1">
                     <h2>Scrum Foundation Professional Certification - SFPC™</h2>
                     <p>Concluído em 17 de abril de 2024.</p>
                     <a href="https://drive.google.com/file/d/1F7reo8NzisEk0P5807UMQc3PVkjAIBWb/view" target="_blank" class="github-link">
-                        <i class="">Link da Certificação</i>
+                        <i class="fa-solid fa-certificate"></i> Ver Certificado
                     </a>
                 </div>
+
                 <!-- Certificado 2 -->
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <img src="img/udemy.jpg" alt="Certificado 2">
                     <h2>Java 2022 COMPLETO: Do Zero ao Profissional + Projetos</h2>
                     <p>Concluído em 17 de junho de 2024.</p>
                     <a href="https://www.udemy.com/certificate/UC-7a02fd9e-57c4-425e-a31d-dafc842ad38b/" target="_blank" class="github-link">
-                        <i class="">Link da Certificação</i>
+                        <i class="fa-solid fa-certificate"></i> Ver Certificado
                     </a>
                 </div>
 
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Sistema Financeiro - Java Web</h2><br>
-
+                <!-- Certificado 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="img/udemy.jpg" alt="Certificado 3">
+                    <h2>Sistema Financeiro - Java Web</h2>
                     <p>Concluído em 17 de setembro de 2024.</p>
                     <a href="https://www.udemy.com/certificate/UC-48c7928f-1e51-4176-9817-fe2f2bf95f80/" target="_blank" class="github-link">
-                        <i class="">Link da Certificação</i>
+                        <i class="fa-solid fa-certificate"></i> Ver Certificado
                     </a>
                 </div>
 
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Configurando o ambiente de desenvolvimento de Java</h2>
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
+                <!-- Certificados ocultos -->
+                <div class="hidden-cards">
+                    <!-- Certificado 4 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 4">
+                        <h2>Docker Essentials</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/docker-essentials/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 5 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 5">
+                        <h2>Banco de Dados SQL do Zero ao Avançado</h2>
+                        <p>Concluído em 2 de novembro de 2023.</p>
+                        <a href="https://www.udemy.com/certificate/UC-58a7816a-b7e9-4b8f-a947-3ddc433434b5/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 6 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 6">
+                        <h2>Testes Unitários em Java utilizando JUnit</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/testes-unidade-automaticos-software-junit/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 7 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 7">
+                        <h2>Web Design Completo: HTML, CSS, JS, Vue e GIT</h2>
+                        <p>Concluído em 30 de dezembro de 2024.</p>
+                        <a href="https://www.udemy.com/certificate/UC-d13b274c-11d0-446e-a610-e484153e0edc/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 8 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 8">
+                        <h2>Curso do FIGMA ao código - Daniel Tapias</h2>
+                        <p>Concluído em 21 de abril de 2024.</p>
+                        <a href="https://www.udemy.com/certificate/UC-bd295ce6-ba51-4c19-bb7a-d804d466cdf5/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 9 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 9">
+                        <h2>UX para quem (ainda) não é de UX</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/ux-para-quem-ainda-nao-e-de-ux/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 10 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 10">
+                        <h2>Introdução ao Sistema Operacional Linux</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/linux-ubuntu/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 11 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 11">
+                        <h2>Aprenda Docker em 7 dias</h2>
+                        <p>Concluído em 2 de novembro de 2023.</p>
+                        <a href="https://www.udemy.com/certificate/UC-3387c3c9-2654-43ec-804b-c2fad0caf5f1/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 12 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 12">
+                        <h2>Gestão Ágil com Scrum Completo</h2>
+                        <p>Concluído em 16 de novembro de 2023.</p>
+                        <a href="https://www.udemy.com/certificate/UC-54bdad57-8620-4d40-a06a-cd0d37d26de6/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 13 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 13">
+                        <h2>Introdução a Agilidade + Scrum + Kanban</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/curso-express-agilidade/learn/lecture/20709532#overview" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 14 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 14">
+                        <h2>Git e Github: O Essencial para Iniciantes</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/git-github-o-essencial-para-iniciantes/learn/lecture/29251804#overview" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 15 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 15">
+                        <h2>Curso Essencial de Linux e Shell Linux</h2>
+                        <p>Concluído em 27 de outubro de 2023.</p>
+                        <a href="https://www.udemy.com/certificate/UC-84d79a69-d669-43c6-987d-1506576cfbe4/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 16 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 16">
+                        <h2>Terminal Linux</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/terminal-de-comandos-linux/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 17 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 17">
+                        <h2>Imersão Python: Do Excel à Análise de Dados</h2>
+                        <p>Concluído em 8 de abril de 2024.</p>
+                        <a href="https://drive.google.com/file/d/1O9TjoWFaH14sF6mgTiw2Dy5z5al1eQlg/view" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 18 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 18">
+                        <h2>Imersão Front-End</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://drive.google.com/file/d/1O9TjoWFaH14sF6mgTiw2Dy5z5al1eQlg/view" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 19 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 19">
+                        <h2>Imersão Inteligência Artificial 2a edição</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://cursos.alura.com.br/loginForm?urlAfterLogin=%5BaHR0cHM6Ly9jdXJzb3MuYWx1cmEuY29tLmJyL2ltbWVyc2lvbi8yMi91c2VyL2tha2FrYXJsYTg5Ny9jZXJ0aWZpY2F0ZQ%5D" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 20 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/cubos.png" alt="Certificado 20">
+                        <h2>Minicurso de Programação na prática</h2>
+                        <p>Concluído em 8 de novembro de 2024.</p>
+                        <a href="https://aulas.cubos.academy/certificado/38fe61be-b966-4e1a-8427-d10a52b09269/cursos/833b4b9d-35a1-4d16-b19f-1a221fa7fbfb" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 21 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 21">
+                        <h2>Aprendendo Redes de Computadores de forma prática</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/aprendendo-redes-de-computadores-de-forma-pratica/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 22 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 22">
+                        <h2>Monitoramento de Rede MBA PRTG Networking Monitor</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/prtg-mod1/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 23 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 23">
+                        <h2>Configurando o ambiente de desenvolvimento de Java</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/configurando-o-ambiente-de-desenvolvimento-em-java/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 24 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 24">
+                        <h2>Java SE Polimorfismo</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/java-se-polimorfismo/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 25 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 25">
+                        <h2>Introdução a Agilidade + Scrum + Kanban</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/curso-express-agilidade/learn/lecture/20709532#overview" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 26 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 26">
+                        <h2>Git e Github: O Essencial para Iniciantes</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/git-github-o-essencial-para-iniciantes/learn/lecture/29251804#overview" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 27 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 27">
+                        <h2>Introdução ao Sistema Operacional Linux</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/linux-ubuntu/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 28 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 28">
+                        <h2>Terminal Linux</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/terminal-de-comandos-linux/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 29 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 29">
+                        <h2>Curso Essencial de Linux e Shell Linux</h2>
+                        <p>Concluído em 27 de outubro de 2023.</p>
+                        <a href="https://www.udemy.com/certificate/UC-84d79a69-d669-43c6-987d-1506576cfbe4/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 30 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 30">
+                        <h2>Banco de Dados SQL do Zero ao Avançado</h2>
+                        <p>Concluído em 2 de novembro de 2023.</p>
+                        <a href="https://www.udemy.com/certificate/UC-58a7816a-b7e9-4b8f-a947-3ddc433434b5/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 31 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 31">
+                        <h2>Aprendendo Redes de Computadores de forma prática</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/aprendendo-redes-de-computadores-de-forma-pratica/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 32 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/udemy.jpg" alt="Certificado 32">
+                        <h2>Monitoramento de Rede MBA PRTG Networking Monitor</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://www.udemy.com/course/prtg-mod1/" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 33 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/alura.png" alt="Certificado 33">
+                        <h2>Imersão Python: Do Excel à Análise de Dados</h2>
+                        <p>Concluído em 8 de abril de 2024.</p>
+                        <a href="https://drive.google.com/file/d/1O9TjoWFaH14sF6mgTiw2Dy5z5al1eQlg/view" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 34 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/alura.png" alt="Certificado 34">
+                        <h2>Imersão Front-End</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://drive.google.com/file/d/1O9TjoWFaH14sF6mgTiw2Dy5z5al1eQlg/view" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 35 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/alura.png" alt="Certificado 35">
+                        <h2>Imersão Inteligência Artificial 2a edição</h2>
+                        <p>Concluído em 2024</p>
+                        <a href="https://cursos.alura.com.br/loginForm?urlAfterLogin=%5BaHR0cHM6Ly9jdXJzb3MuYWx1cmEuY29tLmJyL2ltbWVyc2lvbi8yMi91c2VyL2tha2FrYXJsYTg5Ny9jZXJ0aWZpY2F0ZQ%5D" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
+
+                    <!-- Certificado 36 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <img src="img/cubos.png" alt="Certificado 36">
+                        <h2>Minicurso de Programação na prática</h2>
+                        <p>Concluído em 8 de novembro de 2024.</p>
+                        <a href="https://aulas.cubos.academy/certificado/38fe61be-b966-4e1a-8427-d10a52b09269/cursos/833b4b9d-35a1-4d16-b19f-1a221fa7fbfb" target="_blank" class="github-link">
+                            <i class="fa-solid fa-certificate"></i> Ver Certificado
+                        </a>
+                    </div>
                 </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Java SE Polimorfismo</h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Testes Unitários em Java utilizando JUnit</h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Web Design Completo: HTML, CSS, JS, Vue e GIT </h2><br>
-
-                    <p>Concluído em 30 de dezembro de 2024.</p>
-                    <a href="https://www.udemy.com/certificate/UC-d13b274c-11d0-446e-a610-e484153e0edc/" target="_blank" class="github-link">
-                        <i class="">Link da Certificação</i>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Curso do FIGMA ao código - Daniel Tapias</h2><br>
-
-                    <p>Concluído em 21 de abril de 2024.</p>
-                    <a href="https://www.udemy.com/certificate/UC-bd295ce6-ba51-4c19-bb7a-d804d466cdf5/" target="_blank" class="github-link">
-                        <i class="">Link da Certificação</i>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>UX para quem (ainda) não é de UX</h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Docker Essentials </h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Aprenda Docker em 7 dias</h2><br>
-
-                    <p>Concluído em 2 de novembro de 2023.</p>
-                    <a href="https://www.udemy.com/certificate/UC-3387c3c9-2654-43ec-804b-c2fad0caf5f1/" target="_blank" class="github-link">
-
-                        <i class="">Link da Certificação</i>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Gestão Ágil com Scrum Completo</h2><br>
-
-                    <p>Concluído em 16 de novembro de 2023.</p>
-                    <a href="https://www.udemy.com/certificate/UC-54bdad57-8620-4d40-a06a-cd0d37d26de6/" target="_blank" class="github-link">
-
-                        <i class="">Link da Certificação</i>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Introdução a Agilidade + Scrum + Kanban</h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Git e Github: O Essencial para Iniciantes</h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Introdução ao Sistema Operacional Linux</h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>SysAdmin Linux - 100% Terminal - FREE </h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Terminal Linux</h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Curso Essencial de Linux e Shell Linux </h2><br>
-
-                    <p>Concluído em 27 de outubro de 2023.</p>
-                    <a href="https://www.udemy.com/certificate/UC-84d79a69-d669-43c6-987d-1506576cfbe4/" target="_blank" class="github-link">
-
-                        <i class="">Link da Certificação</i>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Banco de Dados SQL do Zero ao Avançado </h2><br>
-
-                    <p>Concluído em 2 de novembro de 2023.</p>
-                    <a href="https://www.udemy.com/certificate/UC-58a7816a-b7e9-4b8f-a947-3ddc433434b5/" target="_blank" class="github-link">
-
-                        <i class="">Link da Certificação</i>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Aprendendo Redes de Computadores de forma prática</h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/udemy.jpg" alt="Certificado 2">
-                    <h2>Monitoramento de Rede MBA PRTG Networking Monitor </h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/alura.png" alt="Certificado 2">
-                    <h2>Imersão Python: Do Excel à Análise de Dados</h2><br>
-
-                    <p>Concluído em 8 de abril de 2024.</p>
-                    <a href="https://drive.google.com/file/d/1O9TjoWFaH14sF6mgTiw2Dy5z5al1eQlg/view" target="_blank" class="github-link">
-
-                        <i class="">Link da Certificação</i>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/alura.png" alt="Certificado 2">
-                    <h2>Imersão Front-End</h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/alura.png" alt="Certificado 2">
-                    <h2>Imersão Inteligência Artificial 2a edição</h2><br>
-
-                    <p></p>
-                    <i class="ab">Sem certificação</i>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/cubos.png" alt="Certificado 2">
-                    <h2> Minicurso de Programação na prática</h2><br>
-
-                    <p>Concluído em 8 de novembro de 2024.</p>
-                    <a href="https://aulas.cubos.academy/certificado/38fe61be-b966-4e1a-8427-d10a52b09269/cursos/833b4b9d-35a1-4d16-b19f-1a221fa7fbfb" target="_blank" class="github-link">
-
-                        <i class="">Link da Certificação</i>
-                    </a>
-                </div>
-
             </div>
+            <button class="load-more-btn" id="load-more-certificates">Ver Mais Certificados</button>
         </div>
     </section>
-
 
     <section id="formacao-academica">
-        <h1>Formação Acadêmica</h1>
-        <div class="formacao">
-            <div class="logo" id="anhanguera-logo">
-                <img src="img/guera.png" alt="Logo Anhanguera">
-                <div class="detalhes">
-                    <h2>Universidade Anhanguera</h2>
-                    <p>Graduando em Análise e Desenvolvimento de Sistemas</p>
-                    <p>3º Semestre</p>
+        <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">Formação Acadêmica</h1>
+        <div class="education-container">
+            <div class="education-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                <div class="education-icon">
+                    <img src="img/guera.png" alt="Logo Anhanguera">
+                </div>
+                <div class="education-content">
+                    <h2>Análise e Desenvolvimento de Sistemas</h2>
+                    <h3>Universidade Anhanguera</h3>
+                    <p class="education-status">Cursando - 3º Semestre</p>
+                    <p class="education-period">2023 - 2025</p>
+                    <ul class="education-details">
+                        <li>Desenvolvimento de Software</li>
+                        <li>Banco de Dados</li>
+                        <li>Engenharia de Software</li>
+                        <li>Programação Orientada a Objetos</li>
+                    </ul>
                 </div>
             </div>
-
         </div>
     </section>
-
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({ offset: 0 });
+        AOS.init();
     </script>
     <script src="script.js"></script>
 </body>

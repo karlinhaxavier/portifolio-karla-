@@ -73,35 +73,159 @@ function toggleFontSize() {
 // Função para alternar o tema
 function toggleTheme() {
     const body = document.body;
-    const themeIcon = document.querySelector('#themeToggle i');
-    
+    const themeToggle = document.getElementById('themeToggle');
+    const icon = themeToggle.querySelector('i');
+
     // Alterna a classe do tema
     body.classList.toggle('light-theme');
-    
-    // Alterna o ícone
+
+    // Atualiza o ícone
     if (body.classList.contains('light-theme')) {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+        icon.className = 'fas fa-sun';
+        localStorage.setItem('theme', 'light');
     } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
+        icon.className = 'fas fa-moon';
+        localStorage.setItem('theme', 'dark');
     }
-    
-    // Salva a preferência do usuário
-    localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
 }
 
-// Carrega o tema salvo quando a página carrega
-document.addEventListener('DOMContentLoaded', () => {
+// Função para debug dos cards
+function debugCards() {
+    console.log('Debugging cards...');
+    const projectCards = document.querySelectorAll('.project-card');
+    console.log(`Found ${projectCards.length} project cards`);
+    
+    projectCards.forEach((card, index) => {
+        console.log(`Card ${index + 1}:`, {
+            visibility: window.getComputedStyle(card).visibility,
+            display: window.getComputedStyle(card).display,
+            opacity: window.getComputedStyle(card).opacity,
+            transform: window.getComputedStyle(card).transform
+        });
+    });
+}
+
+// Carrega o tema salvo ao iniciar a página
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM Content Loaded');
+    
+    // Debug cards
+    debugCards();
+    
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        // Remover qualquer estilo inline que possa estar causando problemas
+        card.removeAttribute('style');
+        
+        // Aplicar estilos básicos
+        card.style.opacity = '1';
+        card.style.transform = 'none';
+        card.style.display = 'block';
+        card.style.visibility = 'visible';
+    });
+    
+    // Typewriter effect
+    typeWriter();
+    
+    // Debug cards novamente após aplicar estilos
+    setTimeout(debugCards, 1000);
+    
     const savedTheme = localStorage.getItem('theme');
+    const themeToggle = document.getElementById('themeToggle');
+    const icon = themeToggle.querySelector('i');
+
     if (savedTheme === 'light') {
         document.body.classList.add('light-theme');
-        const themeIcon = document.querySelector('#themeToggle i');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+        icon.className = 'fas fa-sun';
+    } else {
+        document.body.classList.remove('light-theme');
+        icon.className = 'fas fa-moon';
     }
 });
 
-window.onload = function() {
-    typeWriter();
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const projectsSection = document.getElementById('projects');
+    const certificatesSection = document.getElementById('certificates');
+    const loadMoreProjectsBtn = document.getElementById('load-more-projects');
+    const loadMoreCertificatesBtn = document.getElementById('load-more-certificates');
+
+    // Função para mostrar os cards ocultos
+    function showHiddenCards(section) {
+        const hiddenCards = section.querySelector('.hidden-cards');
+        if (hiddenCards) {
+            const cards = hiddenCards.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                card.style.display = 'block';
+                hiddenCards.parentNode.insertBefore(card, hiddenCards);
+            });
+            hiddenCards.remove();
+        }
+    }
+
+    // Função para esconder os cards extras
+    function hideExtraCards(section) {
+        const cards = section.querySelectorAll('.project-card:not(.hidden-cards .project-card)');
+        cards.forEach((card, index) => {
+            if (index >= 3) {
+                if (!section.querySelector('.hidden-cards')) {
+                    const hiddenContainer = document.createElement('div');
+                    hiddenContainer.className = 'hidden-cards';
+                    card.parentNode.appendChild(hiddenContainer);
+                }
+                section.querySelector('.hidden-cards').appendChild(card);
+            }
+        });
+    }
+
+    // Inicializar os cards
+    hideExtraCards(projectsSection);
+    hideExtraCards(certificatesSection);
+
+    // Event listeners para os botões
+    if (loadMoreProjectsBtn) {
+        loadMoreProjectsBtn.addEventListener('click', function() {
+            showHiddenCards(projectsSection);
+            this.style.display = 'none';
+        });
+    }
+
+    if (loadMoreCertificatesBtn) {
+        loadMoreCertificatesBtn.addEventListener('click', function() {
+            showHiddenCards(certificatesSection);
+            this.style.display = 'none';
+        });
+    }
+
+    // Reset quando a seção sair da viewport
+    window.addEventListener('scroll', function() {
+        const projectsRect = projectsSection.getBoundingClientRect();
+        const certificatesRect = certificatesSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        if (projectsRect.top > windowHeight || projectsRect.bottom < 0) {
+            hideExtraCards(projectsSection);
+            if (loadMoreProjectsBtn) loadMoreProjectsBtn.style.display = 'block';
+        }
+
+        if (certificatesRect.top > windowHeight || certificatesRect.bottom < 0) {
+            hideExtraCards(certificatesSection);
+            if (loadMoreCertificatesBtn) loadMoreCertificatesBtn.style.display = 'block';
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('#projects, #certificates');
+    
+    sections.forEach(section => {
+        section.addEventListener('mousemove', e => {
+            const rect = section.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            section.style.setProperty('--mouse-x', `${x}px`);
+            section.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+});
