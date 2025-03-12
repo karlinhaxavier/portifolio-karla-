@@ -11,9 +11,8 @@ function cancel(){
 // Typewriter Effect
 
 const texts = [
-    "uma ARQUITETA JAVA",
-    "uma Desenvolvedora Backend",
-    "uma Gestora de Projetos"
+    "Desenvolvedora Backend",
+    "Gestora de Projetos"
 ]
 
 let speed = 80; // Aumentando um pouco a velocidade
