@@ -1146,10 +1146,6 @@ body.light-theme .load-more-btn {
     letter-spacing: 1px;
 }
 
-.load-more-btn:hover::before {
-    left: 100%;
-}
-
 .load-more-btn:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 15px rgba(13, 188, 79, 0.3);
@@ -1165,32 +1161,12 @@ body.light-theme .load-more-btn {
 /* Estilos para a seção Conhecimentos */
 #knowledge {
     padding: 5rem 2rem;
-    background: linear-gradient(165deg, #0d1117, #131720);
     position: relative;
     overflow: hidden;
 }
 
-#knowledge::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 20%, rgba(13, 188, 79, 0.1) 0%, transparent 25%),
-        radial-gradient(circle at 80% 80%, rgba(50, 255, 156, 0.1) 0%, transparent 25%);
-    pointer-events: none;
-}
-
-#knowledge .section-title {
-    text-align: center;
-    color: #0dbc4f;
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    margin-bottom: 3rem;
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+body.light-theme #knowledge {
+    background: #ffffff !important;
 }
 
 .knowledge-container {
@@ -1210,6 +1186,30 @@ body.light-theme .load-more-btn {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+}
+
+body.light-theme .knowledge-item {
+    background: #ffffff;
+    border: 1px solid rgba(13, 188, 79, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .tech-item {
+    background: #f8f9fa;
+}
+
+body.light-theme .tech-item:hover {
+    background: #f1f3f5;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(13, 188, 79, 0.1);
+}
+
+body.light-theme .tech-item span {
+    color: #333333;
+}
+
+body.light-theme .knowledge-item h2 {
+    color: #0dbc4f;
 }
 
 .knowledge-item::before {
@@ -1730,71 +1730,85 @@ body.light-theme #contact .cv-button:hover {
     background: rgba(19, 23, 32, 0.8);
     border: 1px solid rgba(13, 188, 79, 0.1);
     border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 
-        0 15px 30px rgba(0, 0, 0, 0.3),
-        0 10px 10px rgba(0, 0, 0, 0.3),
-        inset 0 0 30px rgba(13, 188, 79, 0.1);
-    border-color: rgba(13, 188, 79, 0.3);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover; /* Ajusta a imagem ao tamanho do card */
-    border-bottom: 2px solid #0dbc4f; /* Linha de separação */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 .project-card h2 {
-    color: #ffffff;
-    font-size: 1.5rem; /* Título maior */
-    text-align: center;
-    margin: 1.5rem 0; /* Espaçamento em volta do título */
+    color: #e9ecef;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
 }
 
 .project-card p {
-    color: #e9ecef;
+    color: #8892b0;
     font-size: 0.9rem;
-    padding: 0 1.5rem 1.5rem;
-    text-align: justify;
+    margin-bottom: 1rem;
+    flex-grow: 1;
 }
 
-.ab{
+.github-link {
+    position: relative;
+    z-index: 10;
     display: block;
-    text-align: center;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #7d9128;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    
-}
-
-.project-card a {
-    display: block;
-    text-align: center;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
+    width: auto;
+    padding: 0.8rem 1.5rem;
     background-color: #0dbc4f;
-    color: white;
+    color: #ffffff !important;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: auto;
 }
 
-.project-card a:hover {
-    background-color: white;
+.github-link i {
+    margin-right: 0.5rem;
+}
+
+.github-link:hover,
+.github-link:focus {
+    background-color: transparent;
     color: #0dbc4f;
-    transform: scale(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 188, 79, 0.3);
+    cursor: pointer;
+}
+
+/* Tema claro */
+body.light-theme .project-card {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .project-card h2 {
+    color: #333333;
+}
+
+body.light-theme .project-card p {
+    color: #666666;
+}
+
+body.light-theme .github-link {
+    background-color: #0dbc4f;
+    color: #ffffff !important;
+    border: 2px solid #0dbc4f;
+}
+
+body.light-theme .github-link:hover,
+body.light-theme .github-link:focus {
+    background-color: #ffffff;
+    color: #0dbc4f !important;
+    border-color: #0dbc4f;
 }
 
 .load-more-btn {
@@ -1870,7 +1884,6 @@ body.light-theme .load-more-btn {
     flex-direction: column;
     height: 100%;
     min-height: 450px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-card:hover, .certificate-card:hover {
@@ -1939,8 +1952,9 @@ body.light-theme .load-more-btn {
 
 /* Tema Claro */
 body.light-theme .project-card {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(13, 188, 79, 0.2);
+    box-shadow: 0 5px 15px rgba(13, 188, 79, 0.1);
 }
 
 body.light-theme .project-card:hover {
@@ -2423,22 +2437,23 @@ body.light-theme .certificate-link:hover {
 
 .certificate-link:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(13, 188, 79, 0.4);
+    color: #fff;
 }
 
-/* Tema claro */
-body.light-theme .certificate-link {
-    background: linear-gradient(145deg, #0dbc4f, #098f3c);
-    color: white;
-    border: none;
-    box-shadow: 0 4px 15px rgba(13, 188, 79, 0.2);
+.certificate-link::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
-body.light-theme .certificate-link:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(145deg, #098f3c, #0dbc4f);
-    box-shadow: 0 6px 20px rgba(13, 188, 79, 0.3);
-    border-color: rgba(13, 188, 79, 0.2);
+.certificate-link:hover::after {
+    opacity: 1;
+    bottom: -30px;
 }
 
 /* Ícone do certificado */
