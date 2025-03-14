@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-karla",
+  "version": "1.0.0",
+  "description": "Portfolio website with image optimization",
+  "scripts": {
+    "optimize-images": "node optimize-images.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.1"
+  }
+}
